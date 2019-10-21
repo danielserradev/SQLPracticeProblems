@@ -14,14 +14,10 @@ namespace LINQProblems
             List<string> words = new List<string>() { "the", "bike", "this", "it", "tenth", "mathematics" };
             //where
             var queryedWords = words.Where(s => s.Contains("th")).ToList();
-            foreach (string word in words)
+            for (int i = 0; i < queryedWords.Count; i++)
             {
-                Console.WriteLine(word);
+                Console.WriteLine(queryedWords[i]);
             }
-            //for (int i = 0; i < queryedWords.Count; i++)
-            //{
-            //    Console.WriteLine(queryedWords[i]);
-            //}
             //Console.ReadLine();
 
 
@@ -35,7 +31,11 @@ namespace LINQProblems
                 
             }
             Console.ReadLine();
-            //var queryedNames = names.Where(n => n.Distinct(names))
+
+            //Third Problem
+            List<string> classGrades = new List<string>(){ "80,100,92,89,65", "93,81,78,84,69", "73,88,83,99,64", "98,100,66,74,55" };
+            
+
         }
     }
 }

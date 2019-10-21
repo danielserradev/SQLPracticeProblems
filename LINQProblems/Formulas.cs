@@ -9,7 +9,7 @@ namespace LINQProblems
     public class Formulas
     {
         public string key = "th";
-        public List<String> words = new List<string>() { "the", "bike", "this", "it", "tenth", "mathematics"};
+        public List<string> words = new List<string>() { "the", "bike", "this", "it", "tenth", "mathematics"};
 
         
         static IEnumerable<string> CheckForKey(List<string> words)

@@ -10,14 +10,32 @@ namespace LINQProblems
     {
         static void Main(string[] args)
         {
+            //First problem
             List<string> words = new List<string>() { "the", "bike", "this", "it", "tenth", "mathematics" };
             //where
             var queryedWords = words.Where(s => s.Contains("th")).ToList();
-            for (int i = 0; i < queryedWords.Count; i++)
+            foreach (string word in words)
             {
-                Console.WriteLine(queryedWords[i]);
+                Console.WriteLine(word);
+            }
+            //for (int i = 0; i < queryedWords.Count; i++)
+            //{
+            //    Console.WriteLine(queryedWords[i]);
+            //}
+            //Console.ReadLine();
+
+
+
+            //Second Problem
+            List<string> names = new List<string>() { "Mike", "Brad", "Nevin", "Ian", "Mike" };
+            var results = names.Distinct();
+            foreach (string value in results)
+            {
+                Console.WriteLine(value);
+                
             }
             Console.ReadLine();
+            //var queryedNames = names.Where(n => n.Distinct(names))
         }
     }
 }

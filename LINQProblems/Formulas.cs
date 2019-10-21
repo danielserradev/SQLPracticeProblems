@@ -6,7 +6,23 @@ using System.Threading.Tasks;
 
 namespace LINQProblems
 {
-    class Formulas
+    public class Formulas
     {
+        public string key = "th";
+        public List<String> words = new List<string>() { "the", "bike", "this", "it", "tenth", "mathematics"};
+
+        
+        static IEnumerable<string> CheckForKey(List<string> words)
+        {
+            foreach (string word in words)
+            {
+                Console.WriteLine(word);
+                //if(words = "th")
+                //{
+                //    yield return word;
+                //}
+                yield return word;
+            }
+        }
     }
 }

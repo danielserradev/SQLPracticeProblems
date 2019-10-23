@@ -37,22 +37,12 @@ namespace LINQProblems
             }
 
 
-
             List<string> classGrades = new List<string>()
             {
                 "80,100,92,89,65",
                 "93,81,78,84,69",
                 "73,88,83,99,64",
                 "98,100,66,74,55"};
-
-
-
-
-
-            
-
-
-
 
 
             List<double> averages = new List<double>();
@@ -97,14 +87,30 @@ namespace LINQProblems
             Console.WriteLine(finalAverage);
 
             //Fourth Problem
-            string theName = "Terrill";
-            char[] letters = theName.ToCharArray();
-            //var letters = from element in name orderby element ascending select element;
-            foreach (char character in letters)
+            string theName = "T,e,r,r,i,l,l";
+            var thing = theName.Split(',').ToList();
+            var otherthing = thing.GroupBy(s => s).Select(s => new { letter = s.Key, count = s.Count() });
+            foreach (var character in otherthing)
             {
-                Console.WriteLine(character);
+                Console.WriteLine(character.letter);
+                Console.WriteLine(character.count);
             }
             Console.ReadLine();
+            //string theName = "Terrill";
+            //string whatev = theName.ToLower();
+            // string name = String.Concat(whatevt.OrderBy(c => c));
+            // Console.WriteLine(name);
+
+            //  var thing = theName.Split(',').ToList();
+            // var otherthing = thing.GroupBy(s => s).Select(s=> new { letter = s.Key, count = s.Count() });
+
+            // foreach (var character in otherthing)
+            // {
+            //   Console.WriteLine(character.letter);
+            //    Console.WriteLine(character.count);
+            //  }
+
+            // Console.ReadLine();
 
         }
     }

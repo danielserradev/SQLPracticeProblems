@@ -36,30 +36,21 @@ namespace LINQProblems
                 Console.WriteLine(value);
             }
 
-<<<<<<< HEAD
-            //Third Problem
-            //List<string> classGrades = new List<string>(){ "80,100,92,89,65", "93,81,78,84,69", "73,88,83,99,64", "98,100,66,74,55" };
-           
-            List<string> letters = new List<string>() { "Terrill" };
-            Console.WriteLine(letters.Count());
-            var result = from element in letters orderby element descending select element;
-            Console.WriteLine(result.Count());
-            Console.ReadLine();
-=======
+
 
             List<string> classGrades = new List<string>()
             {
                 "80,100,92,89,65",
                 "93,81,78,84,69",
                 "73,88,83,99,64",
-                "98,100,66,74,55"   };
+                "98,100,66,74,55"};
 
 
 
 
 
             
->>>>>>> 6eeaafa1a5403d22b9b51f64cc6596cb86b659e6
+
 
 
 
@@ -105,9 +96,6 @@ namespace LINQProblems
             double finalAverage = totalPointsAgain / averages.Count;
             Console.WriteLine(finalAverage);
 
-
-
-
             //Fourth Problem
             string theName = "Terrill";
             char[] letters = theName.ToCharArray();
@@ -116,7 +104,6 @@ namespace LINQProblems
             {
                 Console.WriteLine(character);
             }
-
             Console.ReadLine();
 
         }
